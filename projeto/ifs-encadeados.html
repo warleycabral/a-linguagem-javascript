@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="pt">
+	<head>
+		<meta charset="UTF-8">
+		<title>Ifs encadeados</title>
+		
+	</head>
+	<body>
+        <script>
+            var salarioMensal = 2000;
+            var bonus;
+            if(salarioMensal > 0 && salarioMensal < 1000){
+                bonus = salarioMensal * 0.05;
+                
+                console.log(bonus);
+                
+                console.log("salarioMensal > 0 && salarioMensal < 1000")
+                
+            } else if(salarioMensal < 2000){
+                bonus = salarioMensal * 0.10;
+
+                console.log(bonus);
+
+                console.log("salarioMensal < 2000")
+            } else {
+                bonus = salarioMensal * 0.15;
+
+                console.log(bonus);
+
+                console.log("salarioMensal >= 2000")
+            }
+            
+        </script>
+                
+	</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
