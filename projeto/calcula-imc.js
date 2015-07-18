@@ -1,9 +1,9 @@
 
-function calculaIMC(paciente){
+function calculaIMC(){
 
-    if (paciente.altura != 0) {
+    if (this.altura != 0) {
         
-        paciente.imc = paciente.peso / (paciente.altura * paciente.altura);
+        this.imc = this.peso / (this.altura * this.altura);
         
     } else {
         console.log("Altura é igual a zero!");
@@ -25,10 +25,21 @@ for (posicaoAtual = 0; posicaoAtual <= trsPacientes.length - 1; posicaoAtual++) 
         peso : tdPeso.textContent,
         altura : tdAltura.textContent,
         imc : tdImc.textContent,
-        tdImc : tdImc
+        tdImc : tdImc,
+        
+        recuperaImc : function(){
+
+            if (this.altura != 0) {
+
+                this.imc = this.peso / (this.altura * this.altura);
+
+            } else {
+                console.log("Altura é igual a zero!");
+            }
+        }
     };
     
-    calculaIMC(pacienteAtual);
+    pacienteAtual.recuperaImc();
     
     pacienteAtual.tdImc.textContent = pacienteAtual.imc;
 
